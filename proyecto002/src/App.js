@@ -1,6 +1,5 @@
 import './App.css';
 
-
 function mostrarTitulo(titulo) {
   return (
     <h1>{ titulo }</h1>
