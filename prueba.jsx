@@ -1,4 +1,4 @@
-function() {
+function MyFunction() {
     return (
         <div>
         <h1>¡Hola, mundo!</h1>
