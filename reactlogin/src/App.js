@@ -1,9 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+
+function mostrarTitulo(titulo) {
   return (
-    <h1>React Login</h1>
+    <h1>{ titulo }</h1>
+  )
+}
+
+function App() {
+  const buscadores = ["https://www.google.com", "https://www.bing.com", "https://www.yahoo.com"]
+  const titulo2 = "Si señor"
+
+  return (
+    
+    <div>
+      { mostrarTitulo("Hola mundo") }
+      { mostrarTitulo(titulo2) }
+
+      <a href={ buscadores[0] }> google </a>
+      <a href={ buscadores[1] }> bing </a>
+      <a href={ buscadores[2] }> yahoo </a>
+    </div>
+    
   );
 }
 
