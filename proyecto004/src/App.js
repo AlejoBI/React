@@ -4,17 +4,25 @@ import { useState } from 'react';
 
 function App() {
 
-  function generarAleatorio() {
-    const v = Math.trunc(Math.random() * 10);
-    setValor(v);
+  function generarAleatorios() {
+    const vector = new Array(5);
+    for (let i = 0; i < 5; i++) {
+      vector[i] = Math.floor(Math.random() * 10);
+    }
+    setValores(vector);
   }
 
-  const [valor, setValor] = useState(0);
+  const [valores, setValores] = useState([0,0,0,0,0]);
 
   return (
     <div>
-      <p>Numero aleatorio:  { valor } </p>
-      <button onClick={ generarAleatorio }>Generar</button>
+      <p>Numeros aleatorios:  { valores } </p>
+      
+      {valores.map( num => (
+        <p>{num}</p>
+      ))}
+
+      <button onClick={ generarAleatorios }>Generar</button>
     </div>
   );
 }
