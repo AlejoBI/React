@@ -5,7 +5,7 @@ import { useState } from 'react';
 function App() {
 
   function generarAleatorios() {
-    const vector = new Array(5);
+    const vector = new Array(5); // or []
     for (let i = 0; i < 5; i++) {
       vector[i] = Math.floor(Math.random() * 10);
     }
